@@ -1,0 +1,29 @@
+/* Tambahan style agar input dan tombol edit konsisten */
+.input-edit {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: #2c3e50;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}

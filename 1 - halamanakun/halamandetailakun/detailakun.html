@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Akun</title>
+  <link rel="stylesheet" href="detailakun.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Detail Akun</h1>
+    <div class="card">
+      <label for="avatarInput">
+        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img" id="avatarPreview">
+      </label>
+      <input type="file" id="avatarInput" accept="image/*" hidden>
+
+      <!-- Tampilan Info Akun -->
+      <div class="info" id="infoView">
+        <p><strong>Nama:</strong> <span id="nama">Bayu Pratama</span></p>
+        <p><strong>Email:</strong> <span id="email">bayu@example.com</span></p>
+        <p><strong>No. HP:</strong> <span id="telepon">08123456789</span></p>
+        <p><strong>Status:</strong> <span id="status">Aktif</span></p>
+        <div style="text-align:center; margin-top:20px;">
+          <button class="edit-btn" onclick="showEditForm()">Edit</button>
+          <button onclick="toggleStatus()" style="margin-left:10px;">Ubah Status</button>
+        </div>
+      </div>
+
+      <!-- Form Edit Akun (disembunyikan dulu) -->
+      <form id="editForm" style="display:none; margin-top:20px;">
+        <label>Nama:<br>
+          <input type="text" id="editNama" class="input-edit">
+        </label><br>
+        <label>Email:<br>
+          <input type="email" id="editEmail" class="input-edit">
+        </label><br>
+        <label>No. HP:<br>
+          <input type="text" id="editTelepon" class="input-edit">
+        </label><br>
+        <div style="text-align:center; margin-top:20px;">
+          <button type="button" onclick="saveEdit()" class="edit-btn">Simpan</button>
+          <button type="button" onclick="cancelEdit()" class="cancel-btn" style="margin-left:10px;">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="detailakun.js"></script>
+</body>
+</html>
