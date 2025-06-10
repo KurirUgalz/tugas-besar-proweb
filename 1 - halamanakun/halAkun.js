@@ -1,4 +1,4 @@
-    // Notifikasi update dari detail akun
+// Notifikasi update dari detail akun
     if (window.location.search.includes('updated=1')) {
       document.getElementById('notif-update').style.display = 'block';
       setTimeout(() => {
@@ -10,7 +10,6 @@
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     if (!currentUser) {
-      window.location.href = '../3 - halamanlogin/login.html';
     } else {
       document.getElementById('fullname').textContent = currentUser.name;
       document.getElementById('useremail').textContent = currentUser.email;
@@ -21,42 +20,18 @@
       }
     }
 
-    // Ganti foto profil
+    // Ganti foto profil (hanya preview, tidak simpan ke server)
     document.getElementById('avatar-input').addEventListener('change', function(e) {
       const file = e.target.files[0];
       if (file) {
         const reader = new FileReader();
         reader.onload = function(evt) {
           document.getElementById('avatar-img').src = evt.target.result;
-          // Simpan ke localStorage
-          currentUser.avatarUrl = evt.target.result;
-          localStorage.setItem('currentUser', JSON.stringify(currentUser));
-          // Update juga di array users jika ada
-          let users = JSON.parse(localStorage.getItem('users')) || [];
-          users = users.map(u => u.email === currentUser.email ? {...u, avatarUrl: evt.target.result} : u);
-          localStorage.setItem('users', JSON.stringify(users));
         };
         reader.readAsDataURL(file);
       }
     });
 
-    function logout() {
-      if (confirm('Yakin ingin keluar?')) {
-        localStorage.removeItem('currentUser');
-        window.location.href = '../3 - halamanlogin/login.html';
-      }
-    }
-
-    function deleteAccount() {
-      if (confirm('Apakah kamu yakin ingin menghapus akun? Tindakan ini tidak bisa dibatalkan.')) {
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        users = users.filter(user => user.email !== currentUser.email);
-        localStorage.setItem('users', JSON.stringify(users));
-        localStorage.removeItem('currentUser');
-        alert('Akun kamu telah dihapus.');
-        window.location.href = '../3 - halamanlogin/login.html';
-      }
-    }
 
     // Dark mode toggle
     document.getElementById('darkmode-toggle').onclick = function() {
