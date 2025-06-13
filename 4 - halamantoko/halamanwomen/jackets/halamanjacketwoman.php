@@ -13,12 +13,6 @@
     </a>
     <h1>Jackets Collection</h1>
     <p style="color: #5e7c5a;"> Women Catalogue</p>
-    <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
-      </button>
-    </div>
   </header>
   <nav class="shop-nav" style="background: #eaf4ea; border-bottom: 1.5px solid #a3b18a; box-shadow: 0 2px 8px rgba(91,106,77,0.04);">
       <ul class="shop-nav">
@@ -42,10 +36,10 @@
           <svg width="16" height="16" fill="none" style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="#5e7c5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div id="filterDropdown" class="dropdown-content">
-          <div class="dropdown-title">Kategori</div>
+          <div class="dropdown-title">Categories</div>
           <label>
             <input type="radio" name="kategori" value="all" checked onchange="filterProducts('all'); toggleDropdown()">
-            <span>Semua</span>
+            <span>All</span>
           </label>
           <label>
             <input type="radio" name="kategori" value="90s" onchange="filterProducts('90s'); toggleDropdown()">
@@ -71,34 +65,35 @@
         <div class="product-info">
           <h3 class="product-title">90s - Denim Blue</h3>
           <p class="product-price">Rp 399.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('90s - Denim Blue', 399000, '../jackets/jacket/90s-1.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="58"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="90s">
-        <img src="../jackets/jacket/90s-1.jpeg" alt="90s" class="product-image" style="cursor:pointer"
+        <img src="../jackets/jacket/90s-2.jpeg" alt="90s" class="product-image" style="cursor:pointer"
           onclick="showDescModal('90s - Top Brown', 'Rp 459.000', 'Jaket top coklat gaya 90an, bahan nyaman dan stylish.', this.src)" />
         <div class="product-info">
           <h3 class="product-title">90s - Top Brown</h3>
           <p class="product-price">Rp 459.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('90s - Top Brown', 459000, '../jackets/jacket/90s-1.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="59"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
       <div class="product-card" data-category="90s">
         <img src="../jackets/jacket/90s-3.jpeg" alt="90s" class="product-image" style="cursor:pointer"
-          onclick="showDescModal('90s - Grey', 'Rp 599.000', 'Jaket abu-abu gaya 90an, bahan nyaman dan stylish.', this.src)" />
+          onclick="showDescModal('90s - Grey', 'Rp 599.000', 'Jaket cokelat gaya 90an, bahan nyaman dan stylish.', this.src)" />
         <div class="product-info">
-          <h3 class="product-title">90s - Grey</h3>
+          <h3 class="product-title">90s - Brown</h3>
           <p class="product-price">Rp 599.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('90s - Grey', 599000, '../jackets/jacket/90s-3.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="60"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
       <!-- 3 Coat Products -->
@@ -108,10 +103,10 @@
         <div class="product-info">
           <h3 class="product-title">Coat - Black</h3>
           <p class="product-price">Rp 629.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Black', 629000, '/../jackets/jacket/coat-1.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="61"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
       <div class="product-card" data-category="Coat">
@@ -120,22 +115,23 @@
         <div class="product-info">
           <h3 class="product-title">Coat - Brown</h3>
           <p class="product-price">Rp 649.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Brown', 649000, '../jackets/jacket/coat-2.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="62"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="Coat">
         <img src="../jackets/jacket/coat-3.jpeg" alt="Coat" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Coat - Beige', 'Rp 659.000', 'Coat warna beige, elegan dan hangat.', this.src)" />
         <div class="product-info">
           <h3 class="product-title">Coat - Beige</h3>
           <p class="product-price">Rp 659.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Beige', 659000, '../jackets/jacket/coat-3.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="63"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
       <!-- 3 Funnel Neck Products -->
@@ -145,34 +141,36 @@
         <div class="product-info">
           <h3 class="product-title">Funnel Neck - Black</h3>
           <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Funnel Neck - Black', 679000, '../jackets/jacket/funnelneck-1.jpg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="64"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="Funnel">
         <img src="../jackets/jacket/funnelneck-2.jpg" alt="Funnel Neck" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Funnel Neck - Brown', 'Rp 679.000', 'Jaket funnel neck warna coklat, simple dan trendy.', this.src)" />
         <div class="product-info">
           <h3 class="product-title">Funnel Neck - Brown</h3>
           <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Funnel Neck - Brown', 679000, '../jackets/jacket/funnelneck-2.jpg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="65"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+      
       <div class="product-card" data-category="Funnel">
         <img src="../jackets/jacket/funnelneck-3.jpeg" alt="Funnel Neck" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Funnel Neck - Black V Series', 'Rp 679.000', 'Jaket funnel neck hitam V Series, simple dan trendy.', this.src)" />
         <div class="product-info">
           <h3 class="product-title">Funnel Neck - Black V Series</h3>
           <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Funnel Neck - Black V Series', 679000, '../jackets/jacket/funnelneck-3.jpeg')" 
-          title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="66"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
     </div>
@@ -186,10 +184,6 @@
       <h2 id="modalTitle"></h2>
       <p id="modalPrice"></p>
       <p id="modalDesc"></p>
-      <button onclick="addToCartFromModal()" class="add-to-cart-btn"
-        style="position:static;margin-top:18px;border-radius:12px;width:auto;height:auto;font-size:1rem;padding:8px 18px;background:var(--primary-green);color:#fff;display:flex;align-items:center;justify-content:center;">
-        Tambah ke Keranjang
-      </button>
     </div>
   </div>
 

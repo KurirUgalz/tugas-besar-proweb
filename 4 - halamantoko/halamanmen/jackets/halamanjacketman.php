@@ -10,11 +10,10 @@
   <header>
     
     <h1>Jackets Collection</h1>
+    <a href="../../../2 - halamanberanda/beranda.php" class="back-btn" title="Kembali ke Beranda">
+      ← 
+    </a>
     <p style="color: #5e7c5a;">Man Collection</p>
-    <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
       </button>
     </div>
   </header>
@@ -63,99 +62,116 @@
     <div class="products-grid" id="productsGrid">
       <!-- Product Cards -->
       <div class="product-card" data-category="Leather">
-        <img src="../jackets/jacket/leather-1.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Black', 'Rp 399.000', 'Jaket kulit warna hitam, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
+        <img src="../jackets/jacket/leather-1.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Brown', 'Rp 399.000', 'Jaket kulit warna Cokelat, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
+        <div class="product-info">
+          <h3 class="product-title">Leather - Brown</h3>
+          <p class="product-price">Rp 399.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="1"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="Leather">
+        <img src="../jackets/jacket/leather-2.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Black', 'Rp 459.000', 'Jaket kulit warna Hitam, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
         <div class="product-info">
           <h3 class="product-title">Leather - Black</h3>
-          <p class="product-price">Rp 399.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Leather - Black', 399000, '../jackets/jacket/leather-1.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
-        </div>
-      </div>
-      <div class="product-card" data-category="Leather">
-        <img src="../jackets/jacket/leather-2.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Navy', 'Rp 459.000', 'Jaket kulit warna navy, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
-        <div class="product-info">
-          <h3 class="product-title">Leather - Navy</h3>
           <p class="product-price">Rp 459.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Leather - Navy', 459000, '../jackets/jacket/leather-2.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="2"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="Leather">
-        <img src="../jackets/jacket/leather-3.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Grey', 'Rp 599.000', 'Jaket kulit warna abu-abu, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
+        <img src="../jackets/jacket/leather-3.jpg" alt="Leather" class="product-image" onclick="showDescModal('Leather - Black Buttons', 'Rp 599.000', 'Jaket kulit warna Hitam dengan Kancing, bahan nyaman dan stylish.', this.src)" style="cursor:pointer;" />
         <div class="product-info">
-          <h3 class="product-title">Leather - Grey</h3>
+          <h3 class="product-title">Leather - Black Buttons</h3>
           <p class="product-price">Rp 599.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Leather - Grey', 599000, '../jackets/jacket/leather-3.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="3"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
+  
         </div>
       </div>
       <!-- Coat Products -->
       <div class="product-card" data-category="Coat">
-        <img src="../jackets/jacket/coat-1.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Brown', 'Rp 629.000', 'Coat elegan warna coklat, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
-        <div class="product-info">
-          <h3 class="product-title">Coat - Brown</h3>
-          <p class="product-price">Rp 629.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Brown', 629000, '../jackets/jacket/coat-1.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
-        </div>
-      </div>
-      <div class="product-card" data-category="Coat">
-        <img src="../jackets/jacket/coat-2.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Black', 'Rp 649.000', 'Coat elegan warna hitam, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <img src="../jackets/jacket/coat-1.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Black', 'Rp 629.000', 'Coat elegan warna Hitam, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
         <div class="product-info">
           <h3 class="product-title">Coat - Black</h3>
-          <p class="product-price">Rp 649.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Black', 649000, '../jackets/jacket/coat-2.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <p class="product-price">Rp 629.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="4"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="Coat">
-        <img src="../jackets/jacket/coat-3.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Navy', 'Rp 659.000', 'Coat elegan warna navy, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <img src="../jackets/jacket/coat-2.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Brown', 'Rp 649.000', 'Coat elegan warna Cokelat, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
         <div class="product-info">
-          <h3 class="product-title">Coat - Navy</h3>
-          <p class="product-price">Rp 659.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Coat - Navy', 659000, '../jackets/jacket/coat-3.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <h3 class="product-title">Coat - Brown</h3>
+          <p class="product-price">Rp 649.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="5"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
+      <div class="product-card" data-category="Coat">
+        <img src="../jackets/jacket/coat-3.jpg" alt="Coat" class="product-image" onclick="showDescModal('Coat - Grey', 'Rp 659.000', 'Coat elegan warna Abu - Abu, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <div class="product-info">
+          <h3 class="product-title">Coat - Grey</h3>
+          <p class="product-price">Rp 659.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="6"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
+        </div>
+      </div>
+
       <!-- Denim Products -->
       <div class="product-card" data-category="Denim">
-        <img src="../jackets/jacket/denim-1.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Grey', 'Rp 679.000', 'Jaket denim warna abu-abu, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <img src="../jackets/jacket/denim-1.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Blue', 'Rp 679.000', 'Jaket denim warna Biru Terang, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <div class="product-info">
+          <h3 class="product-title">Denim - Blue</h3>
+          <p class="product-price">Rp 679.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="7"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="Denim">
+        <img src="../jackets/jacket/denim-2.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Black', 'Rp 679.000', 'Jaket denim warna Hitam, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
+        <div class="product-info">
+          <h3 class="product-title">Denim - Black</h3>
+          <p class="product-price">Rp 679.000</p>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="8"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="Denim">
+        <img src="../jackets/jacket/denim-3.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Grey', 'Rp 679.000', 'Jaket denim warna Abu - Abu, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
         <div class="product-info">
           <h3 class="product-title">Denim - Grey</h3>
           <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Denim - Grey', 679000, '../jackets/jacket/denim-1.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
-        </div>
-      </div>
-      <div class="product-card" data-category="Denim">
-        <img src="../jackets/jacket/denim-2.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Blue', 'Rp 679.000', 'Jaket denim warna biru, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
-        <div class="product-info">S
-          <h3 class="product-title">Denim - Blue</h3>
-          <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Denim - Blue', 679000, '../jackets/jacket/denim-2.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
-        </div>
-      </div>
-      <div class="product-card" data-category="Denim">
-        <img src="../jackets/jacket/denim-3.jpg" alt="Denim" class="product-image" onclick="showDescModal('Denim - Dark', 'Rp 679.000', 'Jaket denim warna gelap, bahan berkualitas tinggi.', this.src)" style="cursor:pointer;" />
-        <div class="product-info">
-          <h3 class="product-title">Denim - Dark</h3>
-          <p class="product-price">Rp 679.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Denim - Dark', 679000, '../jackets/jacket/denim-3.jpg')" title="Tambah ke Keranjang">
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="9"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
+  
 
   <!-- Modal Deskripsi Produk -->
   <div id="descModal" class="modal" style="display:none;">
@@ -165,9 +181,7 @@
       <h2 id="modalTitle"></h2>
       <p id="modalDesc"></p>
       <p id="modalPrice" style="font-weight:bold;color:#5e7c5a;"></p>
-      <div style="margin:18px 0;">
-        <button onclick="addToCartFromModal()" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Tambah ke Keranjang</button>
-      </div>
+
     </div>
   </div>
 

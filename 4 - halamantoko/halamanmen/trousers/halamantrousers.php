@@ -17,10 +17,6 @@ session_start();
     <h1>Trousers Collection</h1>
     <p style="color: #5e7c5a;">Man Collection</p>
     <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
-      </button>
     </div>
   </header>
   <nav class="shop-nav" style="background: #eaf4ea; border-bottom: 1.5px solid #a3b18a; box-shadow: 0 2px 8px rgba(91,106,77,0.04);">
@@ -69,82 +65,76 @@ session_start();
         <div class="product-info">
           <h3 class="product-title">Plain Trouser 1</h3>
           <p class="product-price">Rp 399.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Plain Trouser 1', 399000, '../trousers/trousers/plaintrousers/trousers1.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="22"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="soft">
         <img src="../trousers/trousers/plaintrousers/trousers2.jpg" alt="Plain Trouser 2" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Plain Trouser 2', 'Rp 349.000', 'Celana panjang polos warna netral, nyaman dipakai.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Plain Trouser 2</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Plain Trouser 2', 349000, '../trousers/trousers/plaintrousers/trousers2.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="23"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="soft">
         <img src="../trousers/trousers/plaintrousers/trousers3.jpg" alt="Plain Trouser 3" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Plain Trouser 3', 'Rp 349.000', 'Celana panjang polos dengan potongan slim fit.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Plain Trouser 3</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Plain Trouser 3', 349000, '../trousers/trousers/plaintrousers/trousers3.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="24"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../trousers/trousers/patterntrousers/trousers4.jpg" alt="Pattern Trouser 1" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Pattern Trouser 1', 'Rp 309.000', 'Celana panjang motif modern, tampil beda.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Pattern Trouser 1</h3>
           <p class="product-price">Rp 309.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Pattern Trouser 1', 309000, '../trousers/trousers/patterntrousers/trousers4.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="25"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../trousers/trousers/patterntrousers/trousers5.jpg" alt="Pattern Trouser 2" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Pattern Trouser 2', 'Rp 349.000', 'Celana panjang motif garis, stylish dan kekinian.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Pattern Trouser 2</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Pattern Trouser 2', 349000, '../trousers/trousers/patterntrousers/trousers5.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="26"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../trousers/trousers/patterntrousers/trousers6.jpg" alt="Pattern Trouser 3" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Pattern Trouser 3', 'Rp 369.000', 'Celana panjang motif floral, tampil beda di setiap kesempatan.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Pattern Trouser 3</h3>
           <p class="product-price">Rp 369.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Pattern Trouser 3', 369000, '../trousers/trousers/patterntrousers/trousers6.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="27"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
+
         </div>
       </div>
     </div>
@@ -158,10 +148,6 @@ session_start();
       <h2 id="modalTitle"></h2>
       <p id="modalPrice"></p>
       <p id="modalDesc"></p>
-      <button onclick="addToCartFromModal()" class="add-to-cart-btn"
-        style="position:static;margin-top:18px;border-radius:12px;width:auto;height:auto;font-size:1rem;padding:8px 18px;background:var(--primary-green);color:#fff;display:flex;align-items:center;justify-content:center;">
-        Tambah ke Keranjang
-      </button>
     </div>
   </div>
 

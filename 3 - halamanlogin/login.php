@@ -6,7 +6,8 @@ $pass = "";
 $db = "toko_online";
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-$error = "";
+$error = ""; // Variabel untuk menyimpan pesan error
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $password = $_POST["password"];
@@ -14,17 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($conn, $query);
     if ($row = mysqli_fetch_assoc($result)) {
-        if (password_verify($password, $row["password"])) {
-            // Login berhasil
-            $_SESSION["user"] = $row["nama"];
-            $_SESSION["email"] = $row["email"];
-            header("Location:../1 - halamanakun/halamanakun.php");
+        if (password_verify($password, $row['password'])) {
+            // Simpan user_id ke sesi
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user'] = $row['nama'];
+            $_SESSION['email'] = $row['email'];
+
+            header("Location: ../2 - halamanberanda/beranda.php");
             exit();
         } else {
-            $error = "Password salah!";
+            $error = "Password salah.";
         }
     } else {
-        $error = "Email tidak ditemukan!";
+        $error = "Email tidak ditemukan.";
     }
 }
 ?>
@@ -35,11 +38,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Masuk</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-message {
+      color: #f44336; /* Warna merah untuk pesan error */
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
     <h1>Masuk</h1>
-    <p id="error-message" style="color: red;"><?php echo $error; ?></p>
     <form method="POST" action="">
       <div>
         <label for="email-input">
@@ -52,6 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </label>
         <input type="password" name="password" id="password-input" placeholder="Sandi" required />
       </div>
+      <!-- Tampilkan pesan error di bawah input sandi -->
+      <?php if (!empty($error)): ?>
+        <p class="error-message"><?= htmlspecialchars($error) ?></p>
+      <?php endif; ?>
       <button type="submit">Masuk</button>
     </form>
     <p>

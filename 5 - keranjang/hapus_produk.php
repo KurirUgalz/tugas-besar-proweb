@@ -1,15 +1,16 @@
 <?php
 session_start();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id_produk'];
+$conn = mysqli_connect("localhost", "root", "", "toko_online");
 
-    // Hapus produk dari keranjang
-    if (isset($_SESSION['cart'][$id])) {
-        unset($_SESSION['cart'][$id]);
-    }
-
-    // Redirect kembali ke halaman keranjang
-    header("Location: cart.php");
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../3%20-%20halamanlogin/login.php");
     exit();
 }
+
+$cart_id = $_POST['cart_id'];
+
+mysqli_query($conn, "DELETE FROM cart WHERE id = '$cart_id'");
+
+header("Location: cart.php");
+exit();
 ?>

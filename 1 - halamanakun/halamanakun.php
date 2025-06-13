@@ -53,11 +53,10 @@ $fotoPath = ($userFoto['foto'] && file_exists($fotoDir . $userFoto['foto'])) ? $
     <div class="nama" id="nama"><?php echo $_SESSION["user"]; ?></div>
     <div class="user-email" id="useremail"><?php echo $_SESSION["email"]; ?></div>
     <div class="menu-list">
-      <a href="#">Pesanan</a>
+      <a href="../7 - pesanan/pesanan.php">Pesanan</a>
       <a href="../2 - halamanberanda/beranda.php">Beranda</a>
-      <a href="#">Alamat</a>
       <a href="../1 - halamanakun/halamandetailakun/detailakun.php"><span>Detail Akun</span></a>
-      <a href="#">Wishlist</a>
+      <a href="../5 - keranjang/cart.php">Keranjang</a>
     </div>
     <a href="logout.php" class="logout-btn">Keluar</a>
     <a href="hapus_akun.php" class="delete-link" onclick="return confirm('Yakin ingin menghapus akun? Semua data akan hilang!')">Hapus Akun</a>

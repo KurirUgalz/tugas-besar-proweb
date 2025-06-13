@@ -12,24 +12,6 @@
       ← 
     </a>
     <h1>Shoes Catalogue</h1>
-    <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
-      </button>
-    </div>
-    <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
-      </button>
-    </div>
-    <div style="position:absolute;top:32px;right:40px;">
-      <button id="cartBtn" style="background:none;border:none;cursor:pointer;position:relative;">
-        🛒
-        <span id="cartCount" style="background:#5e7c5a;color:#fff;border-radius:50%;padding:2px 8px;font-size:13px;position:absolute;top:-10px;right:-16px;">0</span>
-      </button>
-    </div>
   </header>
    <nav class="shop-nav" style="background: #eaf4ea; border-bottom: 1.5px solid #a3b18a; box-shadow: 0 2px 8px rgba(91,106,77,0.04);">
     <ul class="shop-nav">
@@ -78,82 +60,75 @@
         <div class="product-info">
           <h3 class="product-title">Man Boots 1</h3>
           <p class="product-price">Rp 399.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Man Boots 1', 399000, '/4 - halamantoko/halamanshoes/boots/boots/Manboots/Man1.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="28"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="soft">
         <img src="../boots/boots/Manboots/Man2.jpg" alt="Man Boots 2" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Man Boots 2', 'Rp 349.000', 'Boots pria warna coklat, cocok untuk segala aktivitas.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Man Boots 2</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Man Boots 2', 349000, '/4 - halamantoko/halamanshoes/boots/boots/Manboots/Man2.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="29"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="soft">
         <img src="../boots/boots/Manboots/Man3.jpg" alt="Man Boots 3" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Man Boots 3', 'Rp 349.000', 'Boots pria hitam klasik, tahan lama dan elegan.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Man Boots 3</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Man Boots 3', 349000, '/4 - halamantoko/halamanshoes/boots/boots/Manboots/Man3.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="30"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../boots/boots/Womanboots/Woman1.jpg" alt="Woman Boots 1" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Woman Boots 1', 'Rp 309.000', 'Boots wanita bahan lembut, desain modern.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Woman Boots 1</h3>
           <p class="product-price">Rp 309.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Woman Boots 1', 309000, '/4 - halamantoko/halamanshoes/boots/boots/Womanboots/Woman1.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="31"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../boots/boots/Womanboots/Woman2.jpg" alt="Woman Boots 2" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Woman Boots 2', 'Rp 349.000', 'Boots wanita warna krem, ringan dan nyaman.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Woman Boots 2</h3>
           <p class="product-price">Rp 349.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Woman Boots 2', 349000, '/4 - halamantoko/halamanshoes/boots/boots/Womanboots/Woman2.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="32"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
+
       <div class="product-card" data-category="hard">
         <img src="../boots/boots/Womanboots/Woman3.jpg" alt="Woman Boots 3" class="product-image" style="cursor:pointer"
           onclick="showDescModal('Woman Boots 3', 'Rp 369.000', 'Boots wanita hitam elegan, cocok untuk segala acara.', this.src)">
         <div class="product-info">
           <h3 class="product-title">Woman Boots 3</h3>
           <p class="product-price">Rp 369.000</p>
-          <button class="add-to-cart-btn" onclick="addToCart('Woman Boots 3', 369000, '/4 - halamantoko/halamanshoes/boots/boots/Womanboots/Woman3.jpg')"
-            style="position:absolute;bottom:18px;right:18px;"
-          title="Tambah ke Keranjang"
-          >
-            🛒
-          </button>
+          <form action="/tubes/tugas-besar-proweb/5 - keranjang/add_to_cart.php" method="post">
+          <input type="hidden" name="produk_id" value="33"> <!-- ID produk dari database -->
+          <button type="submit" style="padding:10px 24px;background:#5e7c5a;color:#fff;border:none;border-radius:8px;cursor:pointer;">Checkout</button>
+          </form>
         </div>
       </div>
     </div>
@@ -167,10 +142,6 @@
       <h2 id="modalTitle"></h2>
       <p id="modalPrice"></p>
       <p id="modalDesc"></p>
-      <button onclick="addToCartFromModal()" class="add-to-cart-btn"
-        style="position:static;margin-top:18px;border-radius:12px;width:auto;height:auto;font-size:1rem;padding:8px 18px;background:var(--primary-green);color:#fff;display:flex;align-items:center;justify-content:center;">
-        Tambah ke Keranjang
-      </button>
     </div>
   </div>
 

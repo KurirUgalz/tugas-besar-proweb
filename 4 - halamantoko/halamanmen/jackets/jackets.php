@@ -63,27 +63,18 @@ $fontMain = "'Inter', sans-serif";
     .dropdown {
       position: relative;
     }
-
     .filter-btn {
-      background: var(--accent-green);
-      border: 1.5px solid var(--secondary-green);
-      padding: 10px 18px;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
-      box-shadow: 0 2px 8px rgba(94,124,90,0.04);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .filter-btn:hover, .filter-btn:focus {
-      background: var(--hover-green);
-      box-shadow: 0 4px 16px rgba(94,124,90,0.10);
-      border-color: var(--primary-green);
-      outline: none;
-    }
-
+          background: var(--accent-green);
+          border: 1.5px solid var(--secondary-green);
+          padding: 10px 18px;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+          box-shadow: 0 2px 8px rgba(94,124,90,0.04);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
     .dropdown-content {
       display: none;
       position: absolute;
@@ -195,31 +186,6 @@ $fontMain = "'Inter', sans-serif";
       font-size: 1.05rem;
       margin-top: auto;
       letter-spacing: 0.5px;
-    }
-
-    .add-to-cart-btn {
-      background: var(--accent-green);
-      border: 1.5px solid var(--secondary-green);
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
-      font-size: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      bottom: 18px;
-      right: 18px;
-      box-shadow: 0 2px 8px rgba(94,124,90,0.08);
-      transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
-    }
-
-    .add-to-cart-btn:hover, .add-to-cart-btn:focus {
-      background: var(--hover-green);
-      border-color: var(--primary-green);
-      box-shadow: 0 4px 16px rgba(94,124,90,0.13);
-      outline: none;
     }
 
     /* Green color swatch list */

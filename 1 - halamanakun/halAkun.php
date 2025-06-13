@@ -19,10 +19,10 @@
       align-items: center;
       justify-content: space-between;
       padding: 24px 40px;
-      background: #fff;
+      background: #687b60;
       box-shadow: 0 2px 12px rgba(30,66,45,0.07);
       position: sticky;
-      top: 0;
+      top: 1;
       z-index: 10;
     }
     .logo {

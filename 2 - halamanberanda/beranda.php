@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_SESSION['user_id'])) {
+    
+} else {
+    echo "Anda belum login.";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +77,7 @@ session_start();
   <footer>
     <div class="footer-content">
       <h3>TENTANG KAMI</h3>
-      <p>JAWS merupakan brand lokal Indonesia yang bergerak di industri fashion sejak tahun 2025 dengan menghasilkan produk tas, sepatu, baju dengan tema tema vintage dan beberapa aksesoris lainnya yang berkualitas.</p>
+      <p>JAWS adalah merek lokal Indonesia yang telah berkiprah di industri fashion sejak tahun 2025. Kami menghadirkan koleksi produk yang mencakup tas, sepatu, dan pakaian dengan tema vintage yang unik, serta berbagai aksesoris berkualitas tinggi. Dengan desain yang memadukan gaya klasik dan modern, JAWS siap memberikan sentuhan istimewa pada penampilan Anda.</p>
     </div>
   </footer>
 
