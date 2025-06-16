@@ -1,4 +1,5 @@
 <?php
+include '../koneksi.php';
 session_start();
 if (isset($_SESSION['user_id'])) {
     
@@ -16,8 +17,8 @@ if (isset($_SESSION['user_id'])) {
 <body>
   <header>
     <div class="nav-search">
-      <input type="text" placeholder="Pencarian....">
-      <button></button>
+      <input type="text" id="search" placeholder="Pencarian produk...">
+      <div id="search-result"></div>
     </div>
     <img src="logostore.png" alt="JAWS STORE">
     <div class="header-right">

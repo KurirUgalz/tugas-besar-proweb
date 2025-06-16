@@ -120,6 +120,7 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
     .dropdown a {
       display: block;
       padding: 15px 20px;
@@ -199,4 +200,54 @@
     ::placeholder {
       color: #ccc;
       
+    }
+    .card-search {
+      margin-bottom: 12px;
+      max-width: 350px;
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 160px;
+    }
+    .search-result-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .search-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: calc(33.333% - 8px);
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .search-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .search-info {
+      padding: 8px;
+    }
+    .search-harga {
+      color: #d9534f;
+      font-weight: bold;
+    }
+
+    #search-result {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 350px;
+      background: #fff;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      z-index: 999;
+      max-height: 400px;
+      overflow-y: auto;
+      font-size: 15px;
+    }
+    .search-card:hover {
+      background: #f5f5f5;
     }

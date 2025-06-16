@@ -87,6 +87,37 @@ $total = 0;
     .back-button:hover {
       background-color: #0056b3;
     }
+    .rekening-form {
+      max-width: 500px; 
+      margin: 0 auto;
+    }
+
+    .form-pembayaran {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: normal;
+    }
+
+    .form-group select,
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+
   </style>
   <script>
     function toggleBankOptions(paymentMethod) {
@@ -152,23 +183,31 @@ $total = 0;
 
       <!-- Pilihan Bank -->
       <div id="bank-options" class="hidden">
-        <label>Pilih Bank:<br>
-          <select name="bank" required>
-            <option value="mandiri">Bank Mandiri</option>
-            <option value="bca">Bank BCA</option>
-            <option value="bjb">Bank BJB</option>
+        <label for="bank">Pilih Bank:</label>
+          <select id="bank" name="bank">
+            <option value="">Pilih Bank</option>
+            <option value="BCA">Bank BCA</option>
+            <option value="BNI">Bank BNI</option>
+            <option value="BRI">Bank BRI</option>
+            <option value="Mandiri">Bank Mandiri</option>
           </select>
-        </label>
+        <div class="form-group">
+          <label for="norek">Nomor Rekening:</label>
+          <input type="text" id="norek" name="norek" placeholder="Masukkan nomor rekening">
+        </div>
       </div>
 
       <!-- Pilihan E-Wallet -->
       <div id="ewallet-options" class="hidden">
-        <label>Pilih E-Wallet:<br>
+        <label>Pilih E-Wallet:</label>
           <select name="ewallet" required>
             <option value="dana">Dana</option>
             <option value="gopay">GoPay</option>
           </select>
-        </label>
+          <div class="form-group">
+            <label for="notel">Nomor Telepon:</label>
+            <input type="text" id="notel" name="notel" placeholder="Masukkan nomor telepon">
+        </div>
       </div>
 
       <!-- Tombol Konfirmasi -->

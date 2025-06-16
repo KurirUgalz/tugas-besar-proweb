@@ -20,17 +20,6 @@
       });
     });
 
-    // Search
-    const searchInput = document.querySelector('.nav-search input');
-    const searchButton = document.querySelector('.nav-search button');
-    searchButton.addEventListener('click', () => {
-      if (searchInput.value.trim() === '') {
-        alert('Masukkan kata kunci pencarian!');
-      } else {
-        alert(`Mencari: ${searchInput.value}`);
-      }
-    });
-
     // Scroll shadow
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
@@ -68,5 +57,27 @@
         e.preventDefault();
         localStorage.removeItem('username');
         location.reload();
+      });
+    }
+
+    // Live search produk
+    const searchInput = document.getElementById('search');
+    const searchResult = document.getElementById('search-result');
+
+    if (searchInput && searchResult) {
+      searchInput.addEventListener('keyup', function() {
+        const keyword = this.value;
+        if (keyword.length > 0) {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'search_produk.php?keyword=' + encodeURIComponent(keyword), true);
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              searchResult.innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        } else {
+          searchResult.innerHTML = '';
+        }
       });
     }
