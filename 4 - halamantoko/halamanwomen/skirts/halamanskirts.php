@@ -12,6 +12,7 @@
       ← 
     </a>
     <h1>Skirts Collection</h1>
+    <p style="color: #5e7c5a;"> Women Catalogue</p>
   </header>
     <nav class="shop-nav" style="background: #eaf4ea; border-bottom: 1.5px solid #a3b18a; box-shadow: 0 2px 8px rgba(91,106,77,0.04);">
       <ul class="shop-nav">
@@ -24,7 +25,6 @@
     </nav>
     <div style="text-align:center;margin:28px 0 12px 0;font-size:1.25rem;color:#5e7c5a;font-weight:600;letter-spacing:1px;">
     Selamat datang di halaman <span style="color:#1c2b1a;">Skirts</span> JAWS Store! Temukan Skirt favoritmu di sini.
-  </div>
   <div class="container">
     <div class="filters">
       <div class="dropdown">

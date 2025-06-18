@@ -25,7 +25,6 @@
     </nav>
     <div style="text-align:center;margin:28px 0 12px 0;font-size:1.25rem;color:#5e7c5a;font-weight:600;letter-spacing:1px;">
     Selamat datang di halaman <span style="color:#1c2b1a;">Jackets</span> JAWS Store! Temukan Jacket favoritmu di sini.
-  </div>
   <div class="container">
     <div class="filters">
       <div class="dropdown">

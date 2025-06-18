@@ -1,4 +1,4 @@
-   <?php
+<?php
     header("Content-Type: text/css");
     ?>
     * {
@@ -29,9 +29,7 @@
       border-radius: 10px;
       padding: 5px;
       transition: transform 0.3s ease;
-    }
-    .nav-search:hover {
-      transform: scale(1.05);
+      position: relative;
     }
     .nav-search input {
       padding: 5px;
@@ -40,6 +38,12 @@
       color: white;
       outline: none;
     }
+    .nav-search input:focus,
+.nav-search input:hover {
+  outline: none;
+  border: 1px solid #aaa;
+  /* Jangan ubah padding/margin di sini */
+}
     .nav-search button {
       background-color: transparent;
       color: white;
@@ -220,6 +224,13 @@
       overflow: hidden;
       width: calc(33.333% - 8px);
       box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      box-sizing: border-box;
+      background: transparent;
+      transition: background 0.2s;
+    }
+    .search-card:hover {
+      background: #f5f5f5;
     }
     .search-img {
       width: 100%;
@@ -234,20 +245,23 @@
       font-weight: bold;
     }
 
-    #search-result {
-      position: absolute;
-      top: 40px;
-      left: 0;
-      width: 350px;
-      background: #fff;
-      color: #333;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-      z-index: 999;
-      max-height: 400px;
-      overflow-y: auto;
-      font-size: 15px;
-    }
-    .search-card:hover {
-      background: #f5f5f5;
-    }
+/* Box hasil pencarian */
+#search-result {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  min-width: 340px;
+  max-width: 340px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  transition: none;
+  padding: 0;
+  margin: 0;
+  scrollbar-gutter: stable;
+}
+

@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Shoes Catalogue | Jaws Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -11,6 +12,7 @@
     <a href="../../../2 - halamanberanda/beranda.php" class="back-btn" title="Kembali ke Beranda">
       ← 
     </a>
+    <p style="color: #5e7c5a;"> Shoes Catalogue</p>
   </header>
   <nav class="shop-nav" style="background: #eaf4ea; border-bottom: 1.5px solid #a3b18a; box-shadow: 0 2px 8px rgba(91,106,77,0.04);">
       <ul class="shop-nav">
@@ -22,7 +24,6 @@
   </nav>
   <div style="text-align:center;margin:28px 0 12px 0;font-size:1.25rem;color:#5e7c5a;font-weight:600;letter-spacing:1px;">
     Selamat datang di halaman <span style="color:#1c2b1a;">Loafers</span> JAWS Store! Temukan Loafers favoritmu di sini.
-  </div>
   <div class="container">
     <div class="filters">
       <div class="dropdown">

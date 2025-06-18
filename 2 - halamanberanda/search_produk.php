@@ -20,11 +20,10 @@ if (!empty($hasil)) {
     foreach ($hasil as $item) {
         $gambar = !empty($item['gambar']) ? htmlspecialchars($item['gambar']) : 'default.jpg';
         echo '<div class="search-card" style="display:flex;align-items:center;padding:8px 0;border-bottom:1px solid #eee;cursor:pointer;">';
-        echo '<img src="../4 - halaman toko/' . $gambar . '" alt="' . htmlspecialchars($item['nama']) . '" style="width:50px;height:50px;object-fit:cover;margin-right:12px;border-radius:6px;">';
+        echo '<img src="../4 - halamantoko/' . $gambar . '" alt="' . htmlspecialchars($item['nama']) . '" style="width:50px;height:50px;object-fit:cover;margin-right:12px;border-radius:6px;">';
         echo '<div>';
-        echo '<strong>' . htmlspecialchars($item['nama']) . '</strong><br>';
+        echo '<span style="color:#888;">' . htmlspecialchars($item['nama']) . '</span><br>';
         echo '<span style="color:#888;">Rp' . number_format($item['harga']) . '</span><br>';
-        echo '<small>' . htmlspecialchars($item['deskripsi']) . '</small>';
         echo '</div>';
         echo '</div>';
     }
